@@ -24,6 +24,9 @@ podman run -d --replace \
   -np 1 \
   --ubatch-size 2048
 
+# Front end (Odysseus)
+cd ~/odysseus && podman compose start
+
 echo "Loading 35B MTP (40k context, context-shift)..."
 until curl -s http://127.0.0.1:8095/health | grep -q ok; do sleep 2; done
 echo "Now serving: $(curl -s http://127.0.0.1:8095/v1/models | python3 -c 'import sys,json; print(json.load(sys.stdin)["data"][0]["id"])')"

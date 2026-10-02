@@ -36,7 +36,12 @@ Key flags:
 | `-np 1` | One slot, so all memory goes to a single user. |
 | `--temp 0.6 --top-p 0.95 --top-k 20 --min-p 0` | Sampling settings. |
 
-The server listens on port 8095 and exposes an OpenAI-compatible API (`/v1/...`).
+The server is set to port 8095 (my choice, not a llama.cpp default) and exposes an OpenAI-compatible API (`/v1/...`). `--host 0.0.0.0` makes it reachable on every network interface, so only expose it on a network you trust.
+
+## Usage
+
+- Front end: [Odysseus](https://github.com/), started from `~/odysseus` with `podman compose` (the script does this after the server starts). TODO: add the correct link.
+- Remote access: the desktop is on my Tailscale network, so I reach the server (and Odysseus) from my other devices at the desktop's Tailscale address, e.g. `http://<tailscale-name>:8095`.
 
 ## Benchmark
 
