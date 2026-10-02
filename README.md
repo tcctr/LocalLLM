@@ -40,7 +40,7 @@ The server is set to port 8095 (my choice, not a llama.cpp default) and exposes 
 
 ## Usage
 
-- Front end: [Odysseus](https://github.com/), started from `~/odysseus` with `podman compose` (the script does this after the server starts). TODO: add the correct link.
+- Front end: Odysseus, an AI tool that runs locally on the same desktop. It's started from `~/odysseus` with `podman compose` (the script does this after the server starts).
 - Remote access: the desktop is on my Tailscale network, so I reach the server (and Odysseus) from my other devices at the desktop's Tailscale address, e.g. `http://<tailscale-name>:8095`.
 
 ## Benchmark
