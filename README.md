@@ -51,12 +51,6 @@ The server is set to port 8095 (my choice, not a llama.cpp default) and exposes 
 
 Config: the exact flags in `run-server.sh`. Prompt-processing speed has not been measured yet.
 
-To measure it yourself, `bench.sh` wraps `llama-bench`:
-
-```bash
-./bench.sh ~/models/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf -ngl 99 --n-cpu-moe 20 -fa 1
-```
-
 ## Tips
 
 - With a MoE model, the expert weights are what use the VRAM. Tune `--n-cpu-moe` to your card: lower it until you run out of VRAM, then back off by a little.
