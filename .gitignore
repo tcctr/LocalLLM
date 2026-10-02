@@ -1,0 +1,10 @@
+# model weights: too big for GitHub
+*.gguf
+*.safetensors
+*.bin
+
+# secrets
+.env
+*.key
+
+.DS_Store
