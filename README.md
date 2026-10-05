@@ -48,11 +48,3 @@ The server is set to port 8095 (my choice, not a llama.cpp default) and exposes 
 | Metric | Value |
 |--------|-------|
 | Generation speed | 66.04 tokens/s |
-
-Config: the exact flags in `run-server.sh`. Prompt-processing speed has not been measured yet.
-
-## Tips
-
-- With a MoE model, the expert weights are what use the VRAM. Tune `--n-cpu-moe` to your card: lower it until you run out of VRAM, then back off by a little.
-- Quantizing the KV cache to `q8_0` is what makes a 40k context fit alongside the model on 16 GB.
-- On SteamOS, running llama.cpp in a podman container avoids installing build tools on the read-only system.
